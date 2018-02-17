@@ -1,0 +1,24 @@
+{
+  "name": "enroute",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wellstsai/enroute.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wellstsai/enroute/issues"
+  },
+  "homepage": "https://github.com/wellstsai/enroute#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.18.0",
+    "eslint-plugin-react": "^7.6.1"
+  }
+}
