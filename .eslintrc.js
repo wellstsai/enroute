@@ -1,36 +1,18 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es6": true,
-        "node": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
-        },
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
-    }
+  extends: [
+    'airbnb'
+  ],
+  env: {
+    browser: true,
+  },
+  rules: {
+    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
+    'react/require-extension': [0],
+    'import/no-extraneous-dependencies': ["error", { "devDependencies": true }],
+    'jsx-a11y/no-static-element-interactions': 0,
+    'import/prefer-default-export': 0,
+    'no-console': 'error',
+    'no-alert': 'error',
+    'func-names': 'error',
+  },
 };
