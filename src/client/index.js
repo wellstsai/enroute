@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Root from './Root';
+
 // import injectTapEventPlugin from 'react-tap-event-plugin';
 
 // Load Global CSS
@@ -10,6 +12,6 @@ import ReactDOM from 'react-dom';
 // injectTapEventPlugin();
 
 ReactDOM.render(
-  <div>test</div>,
+  <Root />,
   document.getElementById('root'),
 );

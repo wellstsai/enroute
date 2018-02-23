@@ -14,5 +14,8 @@ module.exports = {
     'no-console': 'error',
     'no-alert': 'error',
     'func-names': 'error',
+    "ecmaFeatures": {
+        "blockBindings": true
+    },
   },
 };

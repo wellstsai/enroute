@@ -9,5 +9,5 @@ app.use(helmet());
 app.use(express.static(path.join(__dirname, '../../dist')));
 
 app.listen(port, () => {
-  console.log(`En Route server listening on port ${port}`);
+  console.log(`En Route server listening on port ${port}`); // eslint-disable-line no-console
 });

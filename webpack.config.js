@@ -9,10 +9,14 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
+  },
+  devtool: 'source-map',
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js?$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
@@ -28,7 +32,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/client/index.html',
-      filename: 'index.html',
+      filename: './index.html',
     }),
   ],
 };
