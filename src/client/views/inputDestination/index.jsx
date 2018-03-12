@@ -2,17 +2,27 @@ import React, { Component } from 'react';
 import AutoComplete from 'material-ui/AutoComplete';
 import RaisedButton from 'material-ui/RaisedButton';
 
+import autoCompleteRequest from '../../utils/autocomplete';
 import './style.scss';
+
 
 class InputDestination extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      dataSource: [],
     };
+    this.handleUpdateInput = this.handleUpdateInput.bind(this);
+  }
+
+  async handleUpdateInput(input) {
+    const suggestions = await autoCompleteRequest(input);
+    console.log('suggestions', suggestions)
+    this.setState({ dataSource: suggestions });
   }
 
   render() {
+    console.log('state datasource', this.state.dataSource)
     return (
       <div className="input-destination">
         <div className="intro">
@@ -21,7 +31,8 @@ class InputDestination extends Component {
         <AutoComplete
           id="start"
           hintText="Start Destination"
-          dataSource={[1]}
+          dataSource={this.state.dataSource}
+          onUpdateInput={this.handleUpdateInput}
         />
         <AutoComplete
           id="end"

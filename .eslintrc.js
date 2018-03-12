@@ -17,5 +17,6 @@ module.exports = {
     "ecmaFeatures": {
         "blockBindings": true
     },
+    "class-methods-use-this": 0,
   },
 };
